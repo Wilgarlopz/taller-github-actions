@@ -1,2 +1,2 @@
 
-console.log("Probando Node en GitHub Actions");
+console.log("Probando la seguridad con Secrets");
