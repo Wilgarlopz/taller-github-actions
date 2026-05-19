@@ -14,10 +14,10 @@ jobs:
       - name: Descargar codigo del repo
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Verificar version de Node
-        run: node -v
+      
+      - name: Usando el Secret de forma segura
+        env:
+          MI_LLAVE_SECRETA: ${{ secrets.API_KEY }}
+        run: |
+          echo "Iniciando proceso seguro..."
+          echo "El valor de la API KEY es: $MI_LLAVE_SECRETA"
